@@ -1,0 +1,8 @@
+Normale tekst: Roboto, 16px
+Kop 1: Roboto Bold, 24px
+Kop 2: Roboto, 20px
+Kop 3: Roboto, 16px
+
+black: #000000
+purple: #6420AA
+dark-blue: #1B1A55
