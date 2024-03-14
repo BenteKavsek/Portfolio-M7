@@ -10,11 +10,11 @@ export default {
     ],
 
     theme: {
-        colors:{
-            'lightblue': '#6FA8DC',
-            'black': '#000000',
-        },
         extend: {
+            colors:{
+                black: ['#000'],
+                pink: ['#FFC0CB']
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
