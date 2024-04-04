@@ -16,12 +16,9 @@ class ProjectSeeder extends Seeder
         
         DB::table('projects')->insert([
             'title'       => $faker->text(),
-            'img-path'       => $faker->text(),
+            'image'       => $faker->text(),
             'description' => $faker->text(),
             'active'        => true,
         ]);
     }
 }
-
-
-// 4.3.2 SEEDER
