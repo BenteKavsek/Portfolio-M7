@@ -13,7 +13,7 @@ export default {
         extend: {
             colors:{
                 black: ['#000'],
-                pink: ['#FFC0CB']
+                pink: ['#FFC0CB'],
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
