@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/project', [ProjectController::class, 'index'])->name('project');
+
+Route::get('/project/add', [ProjectController::class, 'add' ])->name('project.add');
 
 require __DIR__.'/auth.php';

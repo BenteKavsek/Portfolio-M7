@@ -1,4 +1,4 @@
 npx tailwindcss -i ./resources/css/app.css -o ./public/dist/app.css --watch
 
 
-les 5.1
+les 5.2
