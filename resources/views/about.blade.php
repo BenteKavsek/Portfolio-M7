@@ -1,4 +1,3 @@
 <x-guest-layout>
-    <h1>test</h1>
-    en meeeeeeeer
+    <h1>About Pagina <3 </h1>
 </x-guest-layout>

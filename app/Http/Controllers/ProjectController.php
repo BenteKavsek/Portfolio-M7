@@ -17,7 +17,6 @@ class ProjectController extends Controller
     }
 
     public function index(){
-
         $projects = Project::all();
 
         return view(
@@ -27,6 +26,11 @@ class ProjectController extends Controller
             ]
             );
     }
+
+    public function show(Project $project): string{
+        return view('projects.show', ['project'=>$project]);
+    }
+
 
 }
 
