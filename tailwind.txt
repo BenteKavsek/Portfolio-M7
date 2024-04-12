@@ -1,4 +1,4 @@
 npx tailwindcss -i ./resources/css/app.css -o ./public/dist/app.css --watch
 
 
-les 7.2, start les
+les 

@@ -12,7 +12,8 @@ class ProjectAdminController extends Controller
      */
     public function index()
     {
-        return 'dit is de index';
+        $projects = Project::paginate(2);
+        return view('dashboard.projects.index', ['projects'=>$projects]);
     }
 
     /**
