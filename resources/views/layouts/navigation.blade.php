@@ -12,15 +12,24 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard/projects/')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('project.index')" :active="request()->routeIs('project.index')">
+                    {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
                         {{ __('About') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('project')" :active="request()->routeIs('project')">
-                        {{ __('Project') }}
+                    <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+                        {{ __('Projects') }}
                     </x-nav-link>
+                    
+                    @auth
+                    <x-nav-link :href="route('project.create')" :active="request()->routeIs('project.create')">
+                        {{ __('Add project') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Admin index') }}
+                    </x-nav-link>
+                    @endauth
                 </div>
             </div>
 
@@ -54,7 +63,7 @@
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
-                            <x-dropdown-link :href="route('project')">
+                            <x-dropdown-link :href="route('projects')">
                                 {{ __('Project') }}
                             </x-dropdown-link>
                         </form>

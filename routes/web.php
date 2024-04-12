@@ -4,8 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProjectAdminController;
 use App\Http\Controllers\ProjectController;
-use App\Models\About;
 use Illuminate\Support\Facades\Route;
+use App\Models\About;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,11 +31,11 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
-Route::get('/project/add', [ProjectController::class, 'add' ])->name('project.add');
+Route::get('/projects/add', [ProjectController::class, 'add' ])->name('projects.add');
 
-Route::get('/project', [ ProjectController::class, 'index' ])->name('project');
+Route::get('/projects', [ ProjectController::class, 'index' ])->name('projects');
 
-Route::get('/project/{project}',[ProjectController::class, 'show'])->name('project.show');
+Route::get('/projects/{project}',[ProjectController::class, 'show'])->name('projects.show');
 
 
 Route::prefix('/dashboard')
@@ -53,7 +53,6 @@ Route::prefix('/dashboard')
             'project' => ProjectAdminController::class,
         ]);
 });
-
 
 
 require __DIR__.'/auth.php';

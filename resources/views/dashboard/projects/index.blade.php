@@ -2,9 +2,15 @@
 
 <h2>Ingelogde dashboard,  wouwie wat mooi</h2>
 
-@foreach($project as $project)
-    <a href="{{route('projectadmin.show', $item)}}">{{ $project->title }}</a><br>
+<a href="{{route('project.create')}}" class="bg-green hover:bg-green text-white font-bold py-2 px-4 rounded float-right">
+    {{ __('New project') }}
+</a>
+
+@foreach($projects as $project)
+    <a href="{{route('project.show', $project)}}">{{ $project->title }}</a><br>
 @endforeach
-{{$project->links()}};
+{{$projects->links()}}
+
+
 
 </x-master-layout>
