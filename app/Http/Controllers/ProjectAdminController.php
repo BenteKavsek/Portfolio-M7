@@ -26,6 +26,15 @@ class ProjectAdminController extends Controller
  
     public function store(Request $request)
     {
+        $valid_data = $request->validate([
+            'title'       => 'required|unique:projects|max:70',
+            'image'       => 'required',
+            'description' => 'required|unique:projects|max:350',
+        ]);
+        
+        dd($valid_data);
+
+
         dump( $request->all() );
     }
 
