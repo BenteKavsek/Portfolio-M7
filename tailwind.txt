@@ -1,4 +1,4 @@
 npx tailwindcss -i ./resources/css/app.css -o ./public/dist/app.css --watch
 
 
-les 
+les 8.2.2 'opslaan van data' kent geen model?
