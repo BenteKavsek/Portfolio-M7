@@ -1,4 +1,9 @@
 npx tailwindcss -i ./resources/css/app.css -o ./public/dist/app.css --watch
 
+vragen:
+- les 8.2.2 'opslaan van data' kent geen model?
 
-les 8.2.2 'opslaan van data' kent geen model?
+
+notes:
+- lee 8.3, toev0ogen link, link zelf: links ipv list
+

@@ -32,19 +32,20 @@ class ProjectAdminController extends Controller
             'description' => 'required|unique:projects|max:350',
         ]);
         
-        $item = new Model($valid_data);
+        $item = new Project();
+        $item->title=$valid_data['title'];
+        $item->image=$valid_data['image'];
+        $item->description=$valid_data['description'];
         $item->save();
 
         return redirect( route('project.show', $item->id ) );
-
-        dump( $request->all() );
     }
 
     
     
     public function show(Project $project)
     {
-        return 'show functiw';
+        return view('dashboard.projects.show', ['project'=>$project]);
     }
 
     

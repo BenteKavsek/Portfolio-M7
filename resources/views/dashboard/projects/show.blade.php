@@ -6,12 +6,10 @@
     {{ __('New project') }}
 </a>
 
-@foreach($projects as $project)
     <a href="{{route('project.show', $project)}}">{{ $project->title }}</a><br>
-@endforeach
 
-
-{{$projects->links()}}
+<p>{{$project->description}}</p>
+{{$project->image}}
 
 
 
